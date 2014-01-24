@@ -61,7 +61,16 @@ WriteLiteral(" href=\"http://asp.net\"");
 
 WriteLiteral(" class=\"btn btn-primary btn-large\"");
 
-WriteLiteral(">Learn more &raquo;</a></p>\r\n</div>\r\n\r\n<div");
+WriteLiteral(">Learn more &raquo;</a></p>\r\n</div>\r\n\r\n<p>Assembly: ");
+
+            
+            #line 11 "..\..\Views\Home\Index.cshtml"
+        Write(GetType().Assembly);
+
+            
+            #line default
+            #line hidden
+WriteLiteral("</p>\r\n\r\n<div");
 
 WriteLiteral(" class=\"row\"");
 
