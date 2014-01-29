@@ -8,8 +8,15 @@ namespace Mvc51ApplicationFx451.Controllers
 {
     public class HomeController : Controller
     {
+        class Foo { }
+        static List<Foo> foos = new List<Foo>();
+
         public ActionResult Index()
         {
+            for (int i = 0; i < 100; i++)
+            {
+                foos.Add(new Foo());
+            }
             return View();
         }
 
