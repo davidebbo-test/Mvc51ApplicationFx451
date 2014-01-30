@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -10,6 +11,10 @@ namespace Mvc51ApplicationFx451.Controllers
     {
         public ActionResult Index()
         {
+            Trace.TraceInformation("This is an informational trace message");
+            Trace.TraceWarning("Here is trace warning");
+            Trace.TraceError("Something is broken; tracing an error!");
+
             return View();
         }
 
