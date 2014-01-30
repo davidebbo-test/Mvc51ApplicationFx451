@@ -25,8 +25,18 @@ namespace Mvc51ApplicationFx451.Controllers
             return View();
         }
 
+
+        private class Foo { }
+        private static List<Foo> foos = new List<Foo>();
+
         public ActionResult Contact()
         {
+            // Leak a bunch of objects for the fun of it!
+            for (int i = 0; i < 100; i++)
+            {
+                foos.Add(new Foo());
+            }
+
             ViewBag.Message = "Your contact page.";
 
             return View();
