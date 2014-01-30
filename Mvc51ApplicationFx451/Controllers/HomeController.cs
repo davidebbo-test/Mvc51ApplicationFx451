@@ -15,6 +15,8 @@ namespace Mvc51ApplicationFx451.Controllers
             Trace.TraceWarning("Here is trace warning");
             Trace.TraceError("Something is broken; tracing an error!");
 
+            ViewBag.Message = "Some message from the controller";
+
             return View();
         }
 
