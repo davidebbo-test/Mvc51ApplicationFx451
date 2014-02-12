@@ -10,6 +10,7 @@ namespace Mvc51ApplicationFx451
 {
     public class MvcApplication : System.Web.HttpApplication
     {
+        public static DateTime _start = DateTime.Now;
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
