@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Diagnostics;
 using System.Linq;
 using System.Web;
@@ -20,7 +21,8 @@ namespace Mvc51ApplicationFx451.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            string blah = ConfigurationManager.AppSettings["blah"];
+            ViewBag.Message = String.Format("The value of setting blah is: '{0}'", blah);
 
             return View();
         }
