@@ -1,0 +1,1 @@
+msbuild Mvc51ApplicationFx451\Mvc51ApplicationFx451.csproj /nologo /verbosity:m /t:Build /t:pipelinePreDeployCopyAllFilesToOneFolder /p:_PackageTempDir=..\Artifacts;AutoParameterizationWebConfigConnectionStrings=false;Configuration=Release /p:SolutionDir=. /p:PublishProfile=ChainedTransform
